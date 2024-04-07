@@ -13,9 +13,10 @@ handlers:
   - url: /static
     static_dir: public
 
-  # tried to make html files easier to link but does not work
-  # - url: /*.html
-  #   static_dir: public/html
+  - url: /(.*\.html)
+    mime_type: text/html
+    static_files: public/html/\1
+    upload: public/html/(.*\.html)
 
   - url: /.*
     secure: always
