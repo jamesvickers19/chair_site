@@ -13,8 +13,9 @@ handlers:
   - url: /static
     static_dir: public
 
-  - url: /*.html
-    static_dir: public/html
+  # tried to make html files easier to link but does not work
+  # - url: /*.html
+  #   static_dir: public/html
 
   - url: /.*
     secure: always
